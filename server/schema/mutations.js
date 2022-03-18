@@ -9,7 +9,16 @@ const UserType = require('./types/user_type');
 const mutation = newGraphQLObjectType({
   name: 'mutation',
   fields: {
+    signup: {
+      type: UserType,
+      args: {
+        email: { type: GraphQLString },
+        password: { type: GraphQLString }
+      },
+      resolve(parentValue, args, request) {
 
+      }
+    }
   }
 });
 
